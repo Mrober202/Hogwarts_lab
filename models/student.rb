@@ -1,4 +1,5 @@
 require_relative('../db/sql_runner')
+require_relative('./house')
 
 class Student
 
@@ -40,6 +41,13 @@ class Student
     student = SqlRunner.run(sql)
     result = Student.new(student.first)
     return result
+  end
+
+  def house()
+    sql = "SELECT * FROM houses WHERE id=#{@house_id}"
+    results = SqlRunner.run(sql)
+    house = results.map{|house| House.new(house)}
+    return house.first()
   end
 
 

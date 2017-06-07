@@ -11,12 +11,12 @@ get '/student' do
 end
 
 get '/student/new' do
+  @houses = House.all()
   erb(:new)
 end
 
 get '/student/:id' do
   @student = Student.find(params[:id])
-  @house = House.find(@student.house_id)
   erb(:show)
 end
 
