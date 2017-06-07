@@ -2,6 +2,9 @@ body {
   background: url(https://gyazo.com/d71bd77fcef4dd0210c5cefcd3515702.png);
   background-repeat: x-repeat;
   background-size: contain;
+  font-family: comic sans ms;
+  color: green;
+  font-size: 100px;
 }
 
 h1 {
